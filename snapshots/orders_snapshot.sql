@@ -2,8 +2,8 @@
 
 {{
     config(
-      target_database='postgres',
-      target_schema='snapshots',
+      target_database='dbt_training',
+      target_schema='test_vijay',
       unique_key='id',
 
       strategy='timestamp',

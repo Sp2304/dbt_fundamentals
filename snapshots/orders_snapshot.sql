@@ -3,7 +3,7 @@
 {{
     config(
       target_database='dbt_training',
-      target_schema='test_sp',
+      target_schema='snapshots',
       unique_key='id',
 
       strategy='timestamp',

@@ -38,7 +38,7 @@ customer_orders as (
         min(orders.order_date) as first_order_date,
         max(orders.order_date) as most_recent_order_date,
         count(orders.order_id) as number_of_orders,
-<<<<<<< HEAD
+
         customer_orders.value
             {% for payment_method in payment_methods -%}
 
@@ -49,8 +49,7 @@ customer_orders as (
        {% endif -%}
 
        {%- endfor %}
-=======
->>>>>>> e704e1865fac469142fff5765588ee215ddd784a
+
         
         -- sum(case when payment_method in('credit_card','coupon','gift_card')  then amount_usd else 0 end) as value
 
@@ -74,7 +73,7 @@ final as (
         customer_orders.first_order_date,
         customer_orders.most_recent_order_date,
         customer_orders.number_of_orders
-        -- customer_orders.value
+        customer_orders.value
 
         
     
@@ -85,7 +84,4 @@ final as (
 
 select * from final
 
-<<<<<<< HEAD
-➕
-=======
->>>>>>> e704e1865fac469142fff5765588ee215ddd784a
+

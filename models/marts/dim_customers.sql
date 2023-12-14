@@ -73,7 +73,7 @@ final as (
         customer_orders.first_order_date,
         customer_orders.most_recent_order_date,
         customer_orders.number_of_orders
-        customer_orders.value
+        -- customer_orders.value
 
         
     

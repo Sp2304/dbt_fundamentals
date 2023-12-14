@@ -7,7 +7,7 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table') }}   /* jinja expression */
+{{ config(materialized='table') }}   /* jinja expression */ /*aama*/
 
 with source_data as (
 

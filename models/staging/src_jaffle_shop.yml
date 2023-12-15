@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: jaffle_shop
-    schema: dbt-postgres
+    schema: test_priya
     tables:
       - name: raw_customers
         columns:

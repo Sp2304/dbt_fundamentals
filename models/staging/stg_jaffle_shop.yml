@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_customers
-    columns: 
+    columns:
       - name: customer_id
         tests:
           - unique
@@ -22,7 +22,7 @@ models:
         description: "{{ doc('status') }}"
         tests:
           - accepted_values:
-               values:
+              values:
                 - completed
                 - shipped
                 - returned

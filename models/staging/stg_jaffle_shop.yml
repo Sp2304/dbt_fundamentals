@@ -24,7 +24,7 @@ models:
           joins:
             - join: stg_customers
               sql_on: ${stg_customers.id} = ${stg_orders.id}
-             
+              fields: [id]
                 
       - name: status
         description: "{{ doc('status') }}"

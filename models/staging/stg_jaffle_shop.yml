@@ -31,3 +31,11 @@ models:
                 - returned
                 - return_pending
                 - placed
+  - name: stg_payments
+    columns:
+      - name: amt_usd
+        description: the method through which payment is made
+        meta:
+          metrics:
+             total_amount:
+               type: sum

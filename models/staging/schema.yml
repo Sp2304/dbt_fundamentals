@@ -46,7 +46,10 @@ models:
           - relationships:
               to: ref('raw_customers')
               field: id
-
+        meta:
+          metrics:
+            total_order_count:
+              type: count_distinct
       - name: order_date
         description: Date (UTC) that the order was placed
 

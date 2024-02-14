@@ -33,7 +33,7 @@ models:
                 - placed
   - name: stg_payments
     columns:
-      - name: amount
+      - name: payment_method
         description: the method through which payment is made
         meta:
           metrics:

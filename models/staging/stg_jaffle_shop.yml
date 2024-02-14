@@ -17,7 +17,10 @@ models:
         tests:
           - unique
           - not_null
-
+        meta:
+          metrics:
+            total_order_count:
+              type: count_distinct 
       - name: status
         description: "{{ doc('status') }}"
         tests:

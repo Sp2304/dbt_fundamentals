@@ -49,14 +49,14 @@ customer_orders as (
 final as (
 
     select
-        customers.id,
+        customers.id as customerid,
         customers.customer_id,
         customers.first_name,
         customers.last_name,
-        customer_orders.order_id,
+        customer_orders.order_id as cust_order_id,
         customer_orders.first_order_date,
         customer_orders.most_recent_order_date,
-        customer_orders.number_of_orders
+        customer_orders.number_of_orders as num_of_orders
         -- customer_orders.value
 
         

@@ -34,10 +34,10 @@ order_payment as (
 
     select
         
-        customers.order_id,
+        customers.cust_order_id,
         min(customers.first_order_date) as first_order_date,
         max(customers.most_recent_order_date) as most_recent_order_date,
-        count(customers.number_of_orders) as number_of_orders,
+        count(customers.num_of_orders) as number_of_orders,
         
         
         {% for payment_method in payment_methods -%}
@@ -51,7 +51,7 @@ order_payment as (
        {%- endfor %}
     
       
-    from payment join customers on customers.order_id = payment.order_id
+    from payment join customers on customers.cust_order_id = payment.order_id
     group by 1
 )
 select * from order_payment

@@ -12,10 +12,6 @@ models:
               field: customer_id
 
   - name: stg_orders
-    meta:
-      joins:
-        - join: stg_customers
-          sql_on: ${stg_customers.id} = ${stg_orders.user_id}
       
     columns:
       - name: order_id
@@ -28,7 +24,6 @@ models:
           metrics:
             total_order_count:
               type: count_distinct 
-           
       
       - name: status
         description: "{{ doc('status') }}"
@@ -40,6 +35,7 @@ models:
                 - returned
                 - return_pending
                 - placed
+          
   - name: stg_payments
     columns:
       - name: order_id
@@ -51,3 +47,6 @@ models:
           metrics:
              total_amount:
                type: sum
+        joins:
+          - join: stg_orders
+            sql_on: ${stg_orders.id} = ${stg_payments.order_id}          

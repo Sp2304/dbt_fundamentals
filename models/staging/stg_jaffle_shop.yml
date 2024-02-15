@@ -41,6 +41,7 @@ models:
     columns:
       - name: order_id
         description: the method through which payment is made
+      - name: payment_method  
         meta:
           metrics:
              total_amount:

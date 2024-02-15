@@ -23,7 +23,7 @@ models:
               type: count_distinct 
            
           joins:
-            - join: stg_customers
+            - join: customers_join
               sql_on: ${stg_customers.id} = ${stg_orders.user_id}
               fields: [id]
                 

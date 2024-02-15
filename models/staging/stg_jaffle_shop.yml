@@ -40,6 +40,11 @@ models:
     columns:
       - name: order_id
         description: order id
+        meta:
+          joins:
+            - join: stg_orders
+              label: orders_payements
+              sql_on: ${stg_orders.order_id} = ${stg_payments.order_id}   
       - name: payment_method  
         description: the method through which payment is made
       - name: amount  
@@ -47,7 +52,4 @@ models:
           metrics:
              total_amount:
                type: sum
-          joins:
-            - join: stg_orders
-              label: orders_payements
-              sql_on: ${stg_orders.order_id} = ${stg_payments.order_id}          
+                 

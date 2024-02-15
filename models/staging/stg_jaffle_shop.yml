@@ -21,9 +21,10 @@ models:
           metrics:
             total_order_count:
               type: count_distinct 
+           
           joins:
             - join: stg_customers
-              sql_on: ${stg_customers.id} = ${stg_orders.id}
+              sql_on: ${stg_customers.id} = ${stg_orders.user_id}
               fields: [id]
                 
       - name: status

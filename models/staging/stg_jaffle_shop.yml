@@ -24,12 +24,7 @@ models:
             total_order_count:
               type: count_distinct 
            
-          joins:
-            - join: stg_customers
-              label: join_customer
-              sql_on: ${stg_customers.id} = ${stg_orders.user_id}
-              fields: [id,user_id]
-                
+      
       - name: status
         description: "{{ doc('status') }}"
         tests:
@@ -48,9 +43,6 @@ models:
         description: the method through which payment is made
       - name: amount  
         meta:
-          joins: stg_orders
-          label: order_payment
-          sql_on: ${stg_orders.id} = ${stg_payments.order_id}
           metrics:
              total_amount:
                type: sum

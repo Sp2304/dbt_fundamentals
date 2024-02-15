@@ -14,6 +14,8 @@ models:
   - name: stg_orders
     columns:
       - name: order_id
+        label: "orderid-label"
+        order_fields_by: "order_id"
         tests:
           - unique
           - not_null
@@ -26,7 +28,7 @@ models:
             - join: stg_customers
               label: join_customer
               sql_on: ${stg_customers.id} = ${stg_orders.user_id}
-              fields: [id]
+              fields: [id,user_id]
                 
       - name: status
         description: "{{ doc('status') }}"

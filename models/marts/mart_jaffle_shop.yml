@@ -8,7 +8,7 @@ models:
       - name: num_of_orders
         meta:
           metric:
-            total_orders:
+            cutomers_orders:
               type: sum  
         
 

@@ -37,14 +37,23 @@ models:
                 - placed
           
   - name: stg_payments
+    meta:
+      label: Order Join payments
+      joins:
+        - join: stg_orders
+          sql_on: ${stg_orders.order_id} = ${stg_payments.order_id}
     columns:
       - name: order_id
         description: order id
-        meta:
-          joins:
-            - join: stg_orders
-              label: orders_payements
-              sql_on: ${stg_orders.order_id} = ${stg_payments.order_id}   
+       
+   
+      - name: payment_id
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_paymens')
+              field: payment_id 
       - name: payment_method  
         description: the method through which payment is made
       - name: amount  

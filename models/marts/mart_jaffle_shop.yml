@@ -7,7 +7,7 @@ models:
         description: id of cutomer
       - name: num_of_orders
         meta:
-          metric:
+          metrics:
              total_order_count:
               type: sum  
         

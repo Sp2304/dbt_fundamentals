@@ -2,7 +2,12 @@ version: 2
 
 models:
   - name: dim_customers
-   
+    meta:
+       joins:
+         - join: stg_orders
+           label: cust_orders
+           sql_on: ${stg_orders.id} = ${dim_customers.cust_order_id}  
+         
     columns:
       - name: customerid
         description: id of cutomer

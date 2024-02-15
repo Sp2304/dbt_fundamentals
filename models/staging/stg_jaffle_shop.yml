@@ -24,6 +24,7 @@ models:
            
           joins:
             - join: stg_customers
+              label: join_customer
               sql_on: ${stg_customers.id} = ${stg_orders.user_id}
               fields: [id]
                 

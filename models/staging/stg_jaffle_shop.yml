@@ -50,4 +50,4 @@ models:
           joins:
             - join: stg_orders
               label: orders_payements
-              sql_on: ${stg_orders.id} = ${stg_payments.order_id}          
+              sql_on: ${stg_orders.order_id} = ${stg_payments.order_id}          

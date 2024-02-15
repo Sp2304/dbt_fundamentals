@@ -40,8 +40,10 @@ models:
   - name: stg_payments
     columns:
       - name: order_id
-        description: the method through which payment is made
+        description: order id
       - name: payment_method  
+        description: the method through which payment is made
+      - name: amount  
         meta:
           metrics:
              total_amount:

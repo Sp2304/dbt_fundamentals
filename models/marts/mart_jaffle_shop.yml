@@ -2,14 +2,12 @@ version: 2
 
 models:
   - name: dim_customers
+   
     columns:
       - name: customerid
         description: id of cutomer
       - name: num_of_orders
-        meta:
-          metrics:
-             total_order_count:
-              type: sum  
+          
         
 
  

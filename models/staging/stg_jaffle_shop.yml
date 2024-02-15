@@ -12,6 +12,11 @@ models:
               field: customer_id
 
   - name: stg_orders
+    meta:
+      joins:
+        - join: stg_customers
+          sql_on: ${stg_customers.id} = ${stg_orders.user_id}
+      
     columns:
       - name: order_id
         label: "orderid-label"

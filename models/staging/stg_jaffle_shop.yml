@@ -48,6 +48,9 @@ models:
         description: the method through which payment is made
       - name: amount  
         meta:
+          joins: stg_orders
+          label: order_payment
+          sql_on: ${stg_orders.id} = ${stg_payments.order_id}
           metrics:
              total_amount:
                type: sum

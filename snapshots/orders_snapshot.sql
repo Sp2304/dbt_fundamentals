@@ -2,7 +2,7 @@
 
 {{
     config(
-      target_database='postgres',
+      target_database='dbt_self',
       target_schema='snapshots',
       unique_key='id',
 

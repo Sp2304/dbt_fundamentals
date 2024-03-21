@@ -2,7 +2,7 @@
 
 {{
     config(
-      target_database='dbt_self',
+      target_database='analytics',
       target_schema='snapshots',
       unique_key='id',
 

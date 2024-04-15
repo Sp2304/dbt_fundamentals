@@ -2,7 +2,7 @@
 
 {{
     config(
-      target_database='postgres',
+      target_database='dataopsly_db',
       target_schema='snapshots',
       unique_key='id',
 

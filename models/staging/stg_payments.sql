@@ -17,11 +17,7 @@ renamed as (
 
         --`amount` is currently stored in cents, so we convert it to dollars
         -- amount / 100 as amount
-<<<<<<< HEAD
          {{ cents_to_dollars('amount') }} as amount_usd 
-=======
-        {{ cents_to_dollars('amount') }} as amount_usd 
->>>>>>> fad6cbe8c251f16793b4143868ce32d12157dd67
 
     from source
 

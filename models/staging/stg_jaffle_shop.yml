@@ -27,9 +27,5 @@ models:
                 - shipped
                 - returned
                 - return_pending
-<<<<<<< HEAD
                 - placed
               
-=======
-                - placed
->>>>>>> fad6cbe8c251f16793b4143868ce32d12157dd67
